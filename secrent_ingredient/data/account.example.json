@@ -1,0 +1,52 @@
+[
+  {
+    "username": "kingston_resident_01",
+    "password": "SecurePassword123!",
+    "note": "Young professional persona - tech industry"
+  },
+  {
+    "username": "parent_advocate_02", 
+    "password": "FamilyFirst456!",
+    "note": "Concerned parent persona - suburban area"
+  },
+  {
+    "username": "local_business_03",
+    "password": "SmallBiz789!",
+    "note": "Local business owner persona"
+  },
+  {
+    "username": "university_student_04",
+    "password": "StudyHard321!",
+    "note": "College student persona - politically engaged"
+  },
+  {
+    "username": "senior_citizen_05",
+    "password": "WisdomYears654!",
+    "note": "Senior citizen persona - community focused"
+  },
+  {
+    "username": "service_worker_06",
+    "password": "HardWork987!",
+    "note": "Service worker persona - practical concerns"
+  },
+  {
+    "username": "kingston_resident_07",
+    "password": "CommunityLife123!",
+    "note": "Second young professional persona"
+  },
+  {
+    "username": "concerned_parent_08",
+    "password": "ChildrenFirst456!",
+    "note": "Second concerned parent persona"
+  },
+  {
+    "username": "entrepreneur_09",
+    "password": "Innovation789!",
+    "note": "Business owner persona variation"
+  },
+  {
+    "username": "grad_student_10",
+    "password": "Research321!",
+    "note": "Graduate student persona"
+  }
+]

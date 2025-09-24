@@ -1,0 +1,54 @@
+# Use Python 3.11 slim image
+FROM python:3.11-slim
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    DEBIAN_FRONTEND=noninteractive
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create app directory
+WORKDIR /app
+
+# Create non-root user for security
+RUN groupadd -r botuser && useradd -r -g botuser botuser
+
+# Copy requirements first for better Docker layer caching
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY . .
+
+# Create necessary directories
+RUN mkdir -p data/logs data/performance data/cache && \
+    chown -R botuser:botuser /app
+
+# Set proper permissions
+RUN chmod +x scripts/*.py
+
+# Switch to non-root user
+USER botuser
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD python -c "import sys; sys.path.insert(0, 'src'); from config.settings import settings; print('Health OK')" || exit 1
+
+# Default command
+CMD ["python", "scripts/deploy_bots.py", "--objective", "support_victor", "--bots", "5"]
+
+# Expose port for monitoring (optional)
+EXPOSE 8080
+
+# Labels for metadata
+LABEL maintainer="Capture the Narrative Team" \
+      description="AI-powered social media influence bot system" \
+      version="1.0.0"

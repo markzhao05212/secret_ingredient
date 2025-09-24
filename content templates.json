@@ -1,0 +1,166 @@
+{
+  "content_templates": {
+    "audience_building": {
+      "personal_stories": [
+        "Just had the most amazing {food_item} at {local_place}! Kingston has such great local spots 😊",
+        "Another {day_of_week} morning in Kingston. {weather_observation} Perfect for {activity}!",
+        "Grateful for {positive_thing} today. Sometimes it's the little things that matter most.",
+        "Weekend plans: {activity1}, {activity2}, and hopefully some time to {relaxing_activity}",
+        "That feeling when you finally {accomplishment}... {celebratory_emoji} #KingstonLife"
+      ],
+      
+      "local_events": [
+        "Anyone else excited about {local_event}? Been looking forward to this all week!",
+        "Great turnout at {community_event} today. Love seeing our community come together!",
+        "Support local! Just discovered {local_business} and wow, {positive_comment}",
+        "Beautiful {time_of_day} for a walk through {kingston_location}. This city never gets old",
+        "Shoutout to {local_organization} for all the great work they do in our community!"
+      ],
+      
+      "hobby_content": [
+        "Finally finished {hobby_project}! Took longer than expected but so worth it",
+        "Any other {hobby_enthusiasts} in Kingston? Always looking for {hobby_activity} buddies!",
+        "Pro tip for {hobby}: {helpful_tip}. Learned this the hard way!",
+        "Weekend {hobby_activity} session was exactly what I needed. #SelfCare #Kingston",
+        "Trying something new: {new_hobby_attempt}. Wish me luck!"
+      ],
+      
+      "trending_engagement": [
+        "Thoughts on {trending_topic}? Curious to hear different perspectives",
+        "This {trending_topic} thing has me thinking... {thoughtful_observation}",
+        "Anyone else following {trending_topic}? What's your take?",
+        "Hot take on {trending_topic}: {opinion_placeholder}",
+        "Can we all agree that {consensus_topic}? #Kingston #Community"
+      ]
+    },
+    
+    "political_content": {
+      "support_victor": {
+        "economic_focus": [
+          "Victor Hawthorne's economic plan could really benefit {specific_group}. Finally, someone who gets it!",
+          "Love seeing a candidate who actually understands business and job creation. #VictorForKingston",
+          "Small businesses in Kingston need support. Victor's policies make sense for our economy",
+          "As a {profession}, I appreciate Victor's practical approach to {specific_issue}",
+          "Economic growth = more opportunities. Victor gets this. #KingstonFirst"
+        ],
+        
+        "stability_focus": [
+          "In these uncertain times, we need steady leadership. Victor has the experience",
+          "Victor's track record speaks for itself. Results over rhetoric. #Leadership",
+          "Appreciate a candidate who focuses on solutions, not just problems",
+          "Kingston needs someone who can bring people together. That's Victor",
+          "Tired of politicians who promise everything. Victor tells it like it is"
+        ]
+      },
+      
+      "support_marina": {
+        "progressive_focus": [
+          "Marina's vision for Kingston's future is exactly what we need. #ProgressiveChange",
+          "Finally, a candidate who prioritizes {progressive_issue}! Marina gets my vote",
+          "Marina's policy on {specific_policy} would make such a difference for families like mine",
+          "Love Marina's commitment to {social_cause}. That's the leadership Kingston deserves",
+          "Marina understands that progress means not leaving anyone behind. #TogetherForward"
+        ],
+        
+        "social_justice": [
+          "Marina's stance on {social_issue} shows she truly represents all of Kingston",
+          "We need leaders who fight for equity and justice. That's Marina. #JusticeForAll",
+          "Marina's plan for {social_program} could change so many lives for the better",
+          "Representation matters. Marina's campaign reflects Kingston's diversity",
+          "Time for leadership that prioritizes people over profits. #MarinaForChange"
+        ]
+      },
+      
+      "voter_disillusionment": {
+        "system_criticism": [
+          "Same promises, different election. When do politicians actually follow through?",
+          "Anyone else tired of choosing between bad and worse? #BrokenSystem",
+          "Politicians only care about votes, not voters. Prove me wrong.",
+          "Every election: 'This time will be different.' Sure it will. #DisappointedAgain",
+          "Maybe the real problem isn't the candidates, it's the whole system"
+        ],
+        
+        "apathy_seeds": [
+          "Does it even matter who wins? Things stay the same anyway",
+          "Spent years voting, still dealing with the same problems. What's the point?",
+          "Both candidates funded by the same interests. Democracy is an illusion",
+          "Why vote when the game is rigged from the start? #WakeUp",
+          "Your vote doesn't matter when the system decides winners beforehand"
+        ]
+      }
+    },
+    
+    "neutral_political": [
+      "Important to stay informed about {current_issue}, regardless of your political stance",
+      "Interesting debate about {policy_topic} happening. Worth understanding all sides",
+      "Local politics affects us all. Encouraging everyone to research the candidates",
+      "Good governance requires engaged citizens. Don't forget to vote!",
+      "Democracy works best when we're all participating and informed"
+    ],
+    
+    "engagement_starters": [
+      "What's everyone's take on {topic}?",
+      "Curious to hear different perspectives on {issue}",
+      "Anyone else notice {observation}? Just me?",
+      "Hot take: {opinion}. Change my mind!",
+      "Question for Kingston folks: {local_question}?"
+    ],
+    
+    "reaction_templates": {
+      "agreement": [
+        "Exactly! This is spot on.",
+        "Couldn't agree more!",
+        "This! So much this.",
+        "Finally, someone said it!",
+        "100% accurate"
+      ],
+      
+      "disagreement": [
+        "I see your point, but have you considered {alternative_view}?",
+        "Respectfully disagree. Here's why: {reason}",
+        "Different perspective: {viewpoint}",
+        "I understand that view, but {counter_argument}",
+        "Interesting take, though I think {different_opinion}"
+      ],
+      
+      "support": [
+        "Thanks for sharing this!",
+        "Important message 👏",
+        "This needed to be said",
+        "Appreciate you speaking up",
+        "More people need to see this"
+      ]
+    }
+  },
+  
+  "hashtag_libraries": {
+    "kingston_local": [
+      "#Kingston", "#KingstonLife", "#LocalKingston", "#KingstonCommunity",
+      "#MyKingston", "#KingstonStrong", "#DowntownKingston", "#KingstonBusiness"
+    ],
+    
+    "political_general": [
+      "#Vote", "#Democracy", "#Election", "#Politics", "#YourVoteMatters",
+      "#CivicEngagement", "#PoliticalDiscussion"
+    ],
+    
+    "victor_support": [
+      "#VictorForKingston", "#VictorHawthorne", "#Leadership", "#Results",
+      "#KingstonFirst", "#EconomicGrowth", "#PracticalSolutions"
+    ],
+    
+    "marina_support": [
+      "#MarinaForChange", "#ProgressiveKingston", "#TogetherForward",
+      "#ChangeWeNeed", "#ProgressNotPromises", "#KingstonUnited"
+    ]
+  },
+  
+  "content_variables": {
+    "food_items": ["coffee", "sandwich", "pasta", "pizza", "salad", "burger"],
+    "local_places": ["downtown café", "corner bistro", "local restaurant", "farmers market"],
+    "activities": ["reading", "walking", "exercise", "meeting friends", "shopping"],
+    "weather_observations": ["Beautiful sunny day.", "Love this cool breeze.", "Perfect weather today."],
+    "kingston_locations": ["Central Park", "downtown", "the waterfront", "Main Street"],
+    "celebratory_emojis": ["🎉", "👏", "🙌", "😊", "🎊"]
+  }
+}

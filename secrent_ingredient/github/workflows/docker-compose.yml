@@ -1,0 +1,111 @@
+version: '3.8'
+
+services:
+  # Main bot system
+  bot-system:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: capture-narrative-bots
+    restart: unless-stopped
+    environment:
+      - PYTHONPATH=/app/src
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config:ro
+      - bot-logs:/app/data/logs
+    depends_on:
+      - redis
+    networks:
+      - bot-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.path.insert(0, 'src'); from config.settings import settings; print('OK')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Monitoring service
+  monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: capture-narrative-monitor
+    restart: unless-stopped
+    command: ["python", "scripts/monitor.py", "--interval", "60"]
+    environment:
+      - PYTHONPATH=/app/src
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data:ro
+      - ./config:/app/config:ro
+    depends_on:
+      - bot-system
+    networks:
+      - bot-network
+
+  # Analytics service (runs periodically)
+  analytics:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: capture-narrative-analytics
+    restart: "no"  # Run manually or via cron
+    command: ["python", "scripts/analytics.py", "--hours", "24", "--charts", "--summary"]
+    environment:
+      - PYTHONPATH=/app/src
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config:ro
+    profiles:
+      - analytics
+    networks:
+      - bot-network
+
+  # Redis for caching and coordination (optional)
+  redis:
+    image: redis:7-alpine
+    container_name: capture-narrative-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - bot-network
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+
+  # Web dashboard (optional - for monitoring)
+  dashboard:
+    image: nginx:alpine
+    container_name: capture-narrative-dashboard
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./data/performance:/usr/share/nginx/html:ro
+      - ./docker/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - bot-system
+    networks:
+      - bot-network
+    profiles:
+      - dashboard
+
+volumes:
+  bot-logs:
+    driver: local
+  redis-data:
+    driver: local
+
+networks:
+  bot-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

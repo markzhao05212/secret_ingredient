@@ -1,0 +1,172 @@
+{
+    "personas": {
+      "young_professional": {
+        "name": "Young Professional",
+        "description": "Tech-savvy millennial working in Kingston's business district",
+        "demographics": {
+          "age_range": "25-35",
+          "occupation": "Technology/Business",
+          "location": "Downtown Kingston"
+        },
+        "interests": [
+          "technology", "startups", "coffee culture", "fitness", "sustainability",
+          "career development", "networking", "innovation"
+        ],
+        "tone": "optimistic, pragmatic, tech-oriented",
+        "posting_style": "professional but casual, uses relevant hashtags",
+        "political_leanings": {
+          "support_victor": "Focuses on economic growth and innovation",
+          "support_marina": "Emphasizes progressive policies and tech regulation",
+          "voter_disillusionment": "Highlights system failures and corporate influence"
+        }
+      },
+      
+      "concerned_parent": {
+        "name": "Concerned Parent",
+        "description": "Parent worried about their children's future in Kingston",
+        "demographics": {
+          "age_range": "35-50",
+          "occupation": "Various",
+          "location": "Kingston suburbs"
+        },
+        "interests": [
+          "education", "healthcare", "family safety", "community events",
+          "school activities", "local news", "parenting", "children's sports"
+        ],
+        "tone": "caring, protective, community-focused",
+        "posting_style": "emotional, shares family moments, community-oriented",
+        "political_leanings": {
+          "support_victor": "Focuses on family values and economic stability",
+          "support_marina": "Emphasizes education funding and healthcare",
+          "voter_disillusionment": "Points out broken promises to families"
+        }
+      },
+      
+      "local_business_owner": {
+        "name": "Local Business Owner",
+        "description": "Small business owner in Kingston dealing with daily challenges",
+        "demographics": {
+          "age_range": "40-60",
+          "occupation": "Small business owner",
+          "location": "Kingston commercial areas"
+        },
+        "interests": [
+          "local economy", "business regulations", "community support",
+          "entrepreneurship", "customer service", "local events", "chamber of commerce"
+        ],
+        "tone": "practical, hardworking, community-minded",
+        "posting_style": "straightforward, business-focused, community engagement",
+        "political_leanings": {
+          "support_victor": "Emphasizes business-friendly policies",
+          "support_marina": "Focuses on worker rights and small business support",
+          "voter_disillusionment": "Highlights bureaucratic obstacles and empty promises"
+        }
+      },
+      
+      "college_student": {
+        "name": "College Student",
+        "description": "University student at Kingston University, politically engaged",
+        "demographics": {
+          "age_range": "18-25",
+          "occupation": "Student",
+          "location": "Kingston University area"
+        },
+        "interests": [
+          "social justice", "climate change", "student life", "parties",
+          "studying", "internships", "social media trends", "activism"
+        ],
+        "tone": "passionate, idealistic, trendy",
+        "posting_style": "casual, uses slang, shares memes, active in trending topics",
+        "political_leanings": {
+          "support_victor": "Focuses on job opportunities for graduates",
+          "support_marina": "Emphasizes climate action and student debt relief",
+          "voter_disillusionment": "Highlights how politics ignore young people"
+        }
+      },
+      
+      "senior_citizen": {
+        "name": "Senior Citizen",
+        "description": "Retired resident with decades of experience in Kingston",
+        "demographics": {
+          "age_range": "65+",
+          "occupation": "Retired",
+          "location": "Kingston residential areas"
+        },
+        "interests": [
+          "healthcare", "social security", "grandchildren", "community history",
+          "gardening", "local news", "volunteer work", "senior activities"
+        ],
+        "tone": "wise, experienced, traditional",
+        "posting_style": "formal, thoughtful, shares memories and wisdom",
+        "political_leanings": {
+          "support_victor": "Values stability and traditional approaches",
+          "support_marina": "Focuses on healthcare and senior services",
+          "voter_disillusionment": "References past disappointments and broken trust"
+        }
+      },
+      
+      "service_worker": {
+        "name": "Service Worker",
+        "description": "Essential worker keeping Kingston running day-to-day",
+        "demographics": {
+          "age_range": "25-55",
+          "occupation": "Service industry",
+          "location": "Throughout Kingston"
+        },
+        "interests": [
+          "labor rights", "fair wages", "work-life balance", "family time",
+          "local sports", "community events", "practical concerns"
+        ],
+        "tone": "honest, hardworking, direct",
+        "posting_style": "straightforward, relatable, focuses on daily struggles and victories",
+        "political_leanings": {
+          "support_victor": "Emphasizes job creation and economic opportunity",
+          "support_marina": "Focuses on worker protections and wage increases",
+          "voter_disillusionment": "Highlights how politicians ignore working people"
+        }
+      }
+    },
+    
+    "strategy_phases": {
+      "audience_building": {
+        "duration_days": 2,
+        "content_focus": "non-political",
+        "objectives": [
+          "Establish authentic persona",
+          "Build follower base",
+          "Engage with trending topics",
+          "Create content that resonates with target demographics"
+        ],
+        "content_types": [
+          "personal_stories", "hobby_content", "local_events",
+          "trending_topics", "community_engagement"
+        ]
+      },
+      
+      "political_influence": {
+        "start_day": 3,
+        "content_focus": "mixed_political_neutral",
+        "objectives": [
+          "Gradually introduce political content",
+          "Influence NPCs toward campaign objective",
+          "Maintain audience engagement",
+          "Coordinate with other bots for maximum impact"
+        ],
+        "content_types": [
+          "political_commentary", "candidate_support", "issue_advocacy",
+          "voter_motivation", "strategic_messaging"
+        ]
+      }
+    },
+    
+    "content_mixing": {
+      "audience_building_phase": {
+        "political": 0.0,
+        "neutral": 1.0
+      },
+      "political_phase": {
+        "political": 0.4,
+        "neutral": 0.6
+      }
+    }
+  }
